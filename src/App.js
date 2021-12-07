@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Checkout from './Components/Checkout';
 
 
 
@@ -10,26 +11,10 @@ function App() {
   return (
     <Router>
       <div className="App">
-
+        <Header />
         <Routes>
-          <Route path="/"
-            element={
-              <>
-                <Header />
-                <Home />
-              </>
-            }
-          />
-          <Route path="/checkout"
-            element={
-              <>
-                <Header />
-                <h1>I am checkout</h1>
-              </>
-            }
-          />
-
-
+          <Route path="/" element={<Home />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
     </Router>
